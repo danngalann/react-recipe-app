@@ -10,12 +10,9 @@ export default function Recipe(props) {
       </div>
       <div className="card-content white-text">
         <span className="card-title">{label}</span>
-        {ingredients.map(ingredient => {
-          return <p>{ingredient.text}</p>
-        })}
       </div>
       <div className="card-action">
-        <a href={url}>View Recipe</a>
+        <a href={url} target="_blank">View Recipe</a>
       </div>
     </div>
   );

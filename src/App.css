@@ -1,14 +1,13 @@
-.App {
-  text-align: center;
-}
-
 .searchForm {
-  margin-top: 5vh;
+  margin: 5vh 0;
 }
 
 .recipes {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  margin: auto;
+  justify-content: space-evenly;
+}
+
+.card {
+  max-width: 300px;
 }

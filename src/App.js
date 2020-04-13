@@ -15,25 +15,29 @@ function App() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.hits)
+        console.log(data.hits);
         setRecipes(data.hits);
       });
   };
 
   return (
-    <div className="App container">
-      <form onSubmit={getRecipes} className="searchForm">
-        <input
-          type="text"
-          name="recipe"
-          id="recipe-search-bar"
-          className="input-field"
-          onChange={(e) => setRecipe(e.target.value)}
-        />
-        <button type="submit" className="btn">
-          Search recipe
-        </button>
-      </form>
+    <div className="App">
+      <div className="container">
+        <h2>Get free recipes for anything!</h2>
+        <form onSubmit={getRecipes} className="searchForm">
+          <input
+            type="text"
+            name="recipe"
+            id="recipe-search-bar"
+            className="input-field"
+            onChange={(e) => setRecipe(e.target.value)}
+            placeholder= "I want a recipe with..."
+          />
+          <button type="submit" className="btn">
+            Search
+          </button>
+        </form>
+      </div>
       <div className="recipes">
         {recipes.map((hit) => {
           return <Recipe key={hit.recipe.label} recipe={hit.recipe} />;
